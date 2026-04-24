@@ -1,4 +1,4 @@
-package com.example.memorizer_flutter
+package uz.mobicraft.memorizer
 
 import io.flutter.embedding.android.FlutterActivity
 
