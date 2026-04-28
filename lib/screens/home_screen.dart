@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../db/database_helper.dart';
 import '../l10n/app_strings.dart';
 import '../l10n/locale_provider.dart';
+import '../theme/theme_provider.dart';
 import '../models/group.dart';
 import 'add_word_screen.dart';
 import 'test_screen.dart';
@@ -197,6 +198,16 @@ class _HomeScreenState extends State<HomeScreen> {
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, _) => IconButton(
+              icon: Icon(themeProvider.isDark
+                  ? Icons.light_mode_rounded
+                  : Icons.dark_mode_rounded),
+              tooltip:
+                  themeProvider.isDark ? s.lightMode : s.darkMode,
+              onPressed: themeProvider.toggle,
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.language_rounded),
             tooltip: s.language,

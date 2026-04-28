@@ -75,6 +75,8 @@ class AppStrings {
   String get settings => _s("Sozlamalar", "Настройки", "Settings");
   String get chooseLanguage =>
       _s("Tilni tanlang", "Выберите язык", "Choose language");
+  String get darkMode => _s("Qorong'u rejim", "Тёмная тема", "Dark mode");
+  String get lightMode => _s("Yorug' rejim", "Светлая тема", "Light mode");
 
   String _s(String uz, String ru, String en) {
     switch (locale) {
